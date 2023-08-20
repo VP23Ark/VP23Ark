@@ -7,20 +7,27 @@ const JumboSectionStyle = {
 
 const Vision = () => {
     return (
-        <div className="container-fluid vision-bg-color">
-            <div style={JumboSectionStyle}>
-                <Header />
-                <div className='row'>
-                    <div className='col col-lg-7 p-4'>
-                        <div className='container-fluid mx-5'>
-                            <h1 className='text-heading-big'>Innovative Technology & services for better future</h1>
+        <div className="w-100 vision-bg-color">
+            <div className='w-100'>
+                <div style={JumboSectionStyle}>
+                    <Header />
+                    <div className='row mt-5'>
+                        <div className='col col-lg-7 p-4'>
+                            <div className='container-fluid mx-5'>
+                                <h1 className='text-heading-xxx'>Move Into Future With Us</h1>
+                            </div>
+                        </div>
+                        <div className='col col-lg-6 mt-3'>
+                            <div className='container-fluid mx-5'>
+                                <p className='text-para-xx'>
+                                    We help shape your ideas and turn them into real <strong>BUSINESSES</strong>.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div className='col col-lg-6'>
-                        <div className='container-fluid mx-5'>
-                            <p className='text-para-big'>
-                                Our mission is to help businesses and individuals thrive in a rapidly changing world by providing innovative technology and services that improve efficiency, increase productivity, and reduce costs. Contact us today to learn more about how we can help your organization achieve its goals.
-                            </p>
+                    <div className='row mt-2'>
+                        <div className="d-grid gap-1 col-lg-2 col-md-4 col-sm-6 mx-5">
+                            <button className="btn btn-primary btn-md btn-text" type="button">Let's Begin</button>
                         </div>
                     </div>
                 </div>

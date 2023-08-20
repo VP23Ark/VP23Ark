@@ -24,6 +24,15 @@
 //
 // Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 // Toggle global options
 $enable-gradients: true;
 $enable-shadows: true;
@@ -82,6 +91,7 @@ $success: #7952b3;
 @import "bootstrap/scss/utilities/api";
 
 // custom fonts
+
 
 @font-face {
     font-family: "JOST-LI";   /*Can be any text*/
@@ -143,11 +153,17 @@ $success: #7952b3;
     color: #fff;
     font-family: 'JOST-EBI';
 }
-.text-heading-big {
+
+.text-heading-xxx {
     color: #fff;
     font-family: 'JOST-EBI';
     font-size: xxx-large;
 }
+.text-heading-x {
+    color: #fff;
+    font-family: 'JOST-EBI';
+    font-size: xx-large;
+} 
 
 .text-sub-heading {
     color: #fff;
@@ -159,14 +175,33 @@ $success: #7952b3;
     font-family: 'JOST-LI';
 }
 
-.text-para-big {
+.text-para-xx {
     color: #fff;
     font-family: 'JOST-LI';
     font-size: xx-large;
 }
 
+.text-para-x {
+    color: #fff;
+    font-family: 'JOST-LI';
+    font-size: x-large;
+}
+
+.text-para-x > strong {
+    color: #fff;
+    font-family: 'JOST-LI';
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
 .text-para > strong {
     color: #fff;
     font-family: 'JOST-BI';
+}
+
+.btn-text {
+    font-family: 'JOST-LI';
+    color: #fff;
+    font-size: xx-large;
 }
 
