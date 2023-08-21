@@ -1,67 +1,108 @@
-import { useEffect, useState } from "react";
-import whiteLogo from '../../assets/white_logo.svg'
 import { useNavigate, useLocation } from "react-router-dom";
-import { getFooterStyle } from "./utils.footer";
+
 
 
 const Footer = () => {
     const navigate = useNavigate();
-    const [footerStyle, setFooterStyle] = useState({});
-    const location = useLocation()
 
-    useEffect(() => {
-        // runs on location, i.e. route, change
-        setFooterStyle(getFooterStyle(location))
-        console.log('handle route change here', location)
-    }, [location])
 
     return (
-        <div className="w-100">
-            <div style={footerStyle}>
-                <div className="container text-center">
-                    <div className="row justify-content-md-center">
-                        <div className="col col-lg-4">
-                            <div className="d-flex flex-column">
-                                <div className="col-lg-8 align-items-start d-flex flex-column">
-                                    <img src={whiteLogo} className="img-thumbnail logo" alt="..." />
+        <footer>
+            <div className="newsletter">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+                            <h3 className="text-white">Subscribe Now</h3>
+                            <form action="#">
+                                <div className="input-wrapper">
+                                    <input type="email" className="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email..." />
+                                        <button type="submit" value="send" className="btn btn-primary">Join</button>
                                 </div>
-                                <div className="col m-3 align-items-center d-flex flex-column">
-                                    <p className='text-para'><strong>Contact Us</strong> :      +91-9818325623</p>
-                                    <p className='text-para'><strong>Email Us</strong> :      info@vparkinc.com</p>
-                                    {/* <p className='text-para'><strong>        </strong> :      All Rights Reserved</p> */}
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col col-lg-8 d-flex flex-row">
-                            <div className='col col-lg-4'>
-                                <p className='text-para-big mt-4 mb-4'>Navigation</p>
-                                <p className='text-para' onClick={() => navigate('/')}>Home</p>
-                                <p className='text-para' onClick={() => navigate('/vision')}>Vision</p>
-                                <p className='text-para' onClick={() => navigate('/service')}>Service</p>
-                                <p className='text-para'>Contact Us</p>
-                            </div>
-                            <div className='col col-lg-4'>
-                                <p className='text-para-big  mt-4 mb-4'>Products</p>
-                                <p className='text-para'>RevvPark</p>
-                                <p className='text-para'>Galacto Studio</p>
-                            </div>
-                            <div className='col col-lg-4'>
-                                <p className='text-para-big  mt-4 mb-4'>Services</p>
-                                <p className='text-para'>TDS</p>
-                                <p className='text-para'>APL</p>
-                                <p className='text-para'>Influncer PR</p>
-                                <p className='text-para'>Brand PR</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row justify-content-md-center mt-5 pb-4">
-                        <div className="col col-lg-4">
-                            <p className='text-para'>© Copyright <strong>VP Ark</strong>. All Rights Reserved</p>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="footer bg-footer section border-bottom">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+                            <a className="logo-footer" href="index.html"><img className="img-fluid mb-4" src="images/logo.png" alt="logo" /></a>
+                            <ul className="list-unstyled">
+                                <li className="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
+                                <li className="mb-2">+1 (2) 345 6789</li>
+                                <li className="mb-2">+1 (2) 345 6789</li>
+                                <li className="mb-2">contact@yourdomain.com</li>
+                            </ul>
+                        </div>
+
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+                            <h4 className="text-white mb-5">COMPANY</h4>
+                            <ul className="list-unstyled">
+                                <li className="mb-3"><a className="text-color" href="about.html">About Us</a></li>
+                                <li className="mb-3"><a className="text-color" href="teacher.html">Our Teacher</a></li>
+                                <li className="mb-3"><a className="text-color" href="contact.html">Contact</a></li>
+                                <li className="mb-3"><a className="text-color" href="blog.html">Blog</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+                            <h4 className="text-white mb-5">LINKS</h4>
+                            <ul className="list-unstyled">
+                                <li className="mb-3"><a className="text-color" href="courses.html">Courses</a></li>
+                                <li className="mb-3"><a className="text-color" href="events.html">Events</a></li>
+                                <li className="mb-3"><a className="text-color" href="notice.html">Notice</a></li>
+                                <li className="mb-3"><a className="text-color" href="scholarship.html">Scholarship</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+                            <h4 className="text-white mb-5">SUPPORT</h4>
+                            <ul className="list-unstyled">
+                                <li className="mb-3"><a className="text-color" href="https://themefisher.com/blog">Forums</a></li>
+                                <li className="mb-3"><a className="text-color" href="https://docs.themefisher.com/">Documentation</a></li>
+                                <li className="mb-3"><a className="text-color" href="#!">Language</a></li>
+                                <li className="mb-3"><a className="text-color" href="#!">Release Status</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+                            <h4 className="text-white mb-5">RECOMMEND</h4>
+                            <ul className="list-unstyled">
+                                <li className="mb-3"><a className="text-color" href="https://themefisher.com/">WordPress</a></li>
+                                <li className="mb-3"><a className="text-color" href="https://themefisher.com/">LearnPress</a></li>
+                                <li className="mb-3"><a className="text-color" href="https://themefisher.com/">WooCommerce</a></li>
+                                <li className="mb-3"><a className="text-color" href="https://themefisher.com/">bbPress</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="copyright py-4 bg-footer">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-7 text-sm-left text-center">
+                            <p className="mb-0">Copyright &copy;
+                                <script>
+                                    var CurrentYear = new Date().getFullYear()
+                                    document.write(CurrentYear)
+                                </script>
+                                , designed & developed by <a href="https://themefisher.com/" className="text-muted">Themefisher</a>
+                            </p>
+                        </div>
+                        <div className="col-sm-5 text-sm-right text-center">
+                            <ul className="list-inline">
+                                <li className="list-inline-item"><a className="d-inline-block p-2" href="https://facebook.com/themefisher/"><i className="ti-facebook text-primary"></i></a></li>
+                                <li className="list-inline-item"><a className="d-inline-block p-2" href="https://twitter.com/themefisher"><i className="ti-twitter-alt text-primary"></i></a></li>
+                                <li className="list-inline-item"><a className="d-inline-block p-2" href="https://github.com/themefisher"><i className="ti-github text-primary"></i></a></li>
+                                <li className="list-inline-item"><a className="d-inline-block p-2" href="https://instagram.com/themefisher/"><i className="ti-instagram text-primary"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     )
 }
 

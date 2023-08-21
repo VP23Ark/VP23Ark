@@ -1,17 +1,37 @@
 import { createBrowserRouter } from "react-router-dom";
 import {
     Vision,
-    ServicePage,
-    Landing,
+    Services,
+    Notice,
     Homepage,
     Blog,
-    BlogDetail
+    BlogDetail,
+    Contact,
+    Technologies,
+    ServiceDetail,
+    TechnologyDetail,
+    Scholarship,
+    Career
 } from '../pages';
 
-const ChildBlogPages = [
+const childBlogPages = [
     {
         path: "messages",
         element: <BlogDetail />,
+    }
+]
+
+const childServicePages = [
+    {
+        path: "service-detail",
+        element: <ServiceDetail />,
+    }
+]
+
+const childTechnologyPages = [
+    {
+        path: "messages",
+        element: <TechnologyDetail />,
     }
 ]
 
@@ -25,17 +45,35 @@ const Router = createBrowserRouter([
         element: <Vision />,
     },
     {
-        path: "/service",
-        element: <ServicePage />,
+        path: "/contact",
+        element: <Contact />,
     },
     {
-        path: "/landing",
-        element: <Landing />,
+        path: "/technologies",
+        element: <Technologies />,
+        children: childTechnologyPages
+    },
+    {
+        path: "/services",
+        element: <Services />,
+        children: childServicePages
     },
     {
         path: "/blogs",
         element: <Blog />,
-        children: ChildBlogPages
+        children: childBlogPages
+    },
+    {
+        path: "/notice",
+        element: <Notice />,
+    },
+    {
+        path: "/career",
+        element: <Career />,
+    },
+    {
+        path: "/scholarship",
+        element: <Scholarship />,
     },
 ]);
 

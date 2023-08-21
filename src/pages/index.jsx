@@ -1,15 +1,29 @@
 import Vision from "./vision";
-import ServicePage from "./services";
-import Landing from "./landing";
+import Services from "./services";
+import Notice from "./notice";
 import Homepage from "./homepage";
 import BlogDetail from "./blog-detail";
 import Blog from "./blog";
+import Technologies from "./technologies";
+import Contact from "./contact";
+import ServiceDetail from "./services-detail";
+import TechnologyDetail from "./technologies-detail";
+import Career from "./career";
+import Scholarship from "./scholarship";
+
+
 
 export {
     Vision,
-    ServicePage,
-    Landing,
+    Services,
+    Notice,
     Homepage,
     Blog,
-    BlogDetail
+    BlogDetail,
+    ServiceDetail,
+    TechnologyDetail,
+    Technologies,
+    Contact,
+    Career,
+    Scholarship
 }
