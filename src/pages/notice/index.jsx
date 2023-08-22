@@ -7,9 +7,10 @@ const Notice = () => {
 
 
 
-
-
-            <PageTitleSection />
+            <PageTitleSection 
+                PageTitle={"Stay Updated with VP Ark"} 
+                PageDesc={"Get the latest updates, news and insights from VP Ark. Keep yourself informed about our projects, achievements and industry trends."} 
+            />
 
 
 

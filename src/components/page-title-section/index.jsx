@@ -1,20 +1,22 @@
-import { useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import PageTitleDefaultImage from '../../assets/backgrounds/page-title.jpg'
 
-
-
-const PageTitleSection = () => {
-    const navigate = useNavigate();
+const PageTitleSection = ({ PageTitle, PageDesc, PageImage = "" }) => {
+    const sectionImage = PageImage === "" ? PageTitleDefaultImage : PageImage
 
     return (
-        <section className="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+        <section className="page-title-section overlay" style={{
+            backgroundImage:
+                `url(${sectionImage})`,
+        }}>
             <div className="container">
                 <div className="row">
                     <div className="col-md-8">
                         <ul className="list-inline custom-breadcrumb mb-2">
-                            <li className="list-inline-item"><a className="h2 text-primary font-secondary" href={navigate('/')}>Home</a></li>
-                            <li className="list-inline-item text-white h3 font-secondary nasted">Our Blog</li>
+                            <li className="list-inline-item"><Link className="h2 text-primary font-secondary" to="/">Home</Link></li>
+                            <li className="list-inline-item text-white h3 font-secondary nasted">{PageTitle}</li>
                         </ul>
-                        <p className="text-lighten mb-0">Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others.</p>
+                        <p className="text-lighten mb-0">{PageDesc}</p>
                     </div>
                 </div>
             </div>

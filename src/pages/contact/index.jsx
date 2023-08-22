@@ -6,7 +6,10 @@ const Contact = () => {
             <Header />
 
 
-           <PageTitleSection />
+            <PageTitleSection 
+                PageTitle={"Get in Touch with VP Ark"} 
+                PageDesc={"Reach out to explore how our cutting edge IT solutions and software service can transform your business. We're just a message away from making sense together."} 
+            />
 
 
 
@@ -36,14 +39,6 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
-
-
-
-            <section className="section pt-0">
-
-                <div id="map_canvas" data-latitude="51.507351" data-longitude="-0.127758"></div>
-            </section>
-
 
             <Footer />
         </div>

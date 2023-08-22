@@ -1,17 +1,27 @@
 import { Header, Footer, PageTitleSection } from '../../components';
+import aboutBackImg from '../../assets/about/about-page.jpg';
+import successStoryImg from '../../assets/backgrounds/success-story.jpg';
+import teamData from '../../data/team';
+import { Link } from 'react-router-dom';
 
 const Vision = () => {
+
+    const teams = teamData();
+
     return (
         <div>
             <Header />
 
-            <PageTitleSection />
+            <PageTitleSection
+                PageTitle={"Unveiling the vision: VP Ark"}
+                PageDesc={"VP23Ark is where the prowess of business & strategy and the innovation of technology & vision converge. Dive into our realm where strategic excellence blends seamlessly with cutting-edge solutions, crafting a landscape where everything makes sense."}
+            />
 
             <section className="section">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <img className="img-fluid w-100 mb-4" src="images/about/about-page.jpg" alt="about image" />
+                            <img className="img-fluid w-100 mb-4" src={aboutBackImg} alt="about image" />
                             <h2 className="section-title">ABOUT OUR JOURNY</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsa illo quod veritatis, magni debitis fugiat dolore voluptates! Consequatur, aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat perferendis sint optio similique. Et amet magni facilis vero corporis quos.</p>
                             <p>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum a, facere fugit error accusamus est officiis vero in, nostrum laboriosam corrupti explicabo, cumque repudiandae deleniti perspiciatis quae consectetur enim. Laboriosam!</p>
@@ -59,7 +69,11 @@ const Vision = () => {
 
 
 
-            <section className="section bg-cover" data-background="images/backgrounds/success-story.jpg">
+            <section className="section bg-cover"
+                style={{
+                    backgroundImage: `url(${successStoryImg})`,
+                }}
+            >
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-sm-4 position-relative success-video">
@@ -84,68 +98,40 @@ const Vision = () => {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-12">
-                            <h2 className="section-title">Our Teachers</h2>
+                            <h2 className="section-title">Our Team</h2>
                         </div>
 
-                        <div className="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                            <div className="card border-0 rounded-0 hover-shadow">
-                                <img className="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher" />
-                                <div className="card-body">
-                                    <a href="teacher-single.html">
-                                        <h4 className="card-title">Jacke Masito</h4>
-                                    </a>
-                                    <div className="d-flex justify-content-between">
-                                        <span>Teacher</span>
-                                        <ul className="list-inline">
-                                            <li className="list-inline-item"><a className="text-color" href="https://facebook.com/themefisher"><i className="ti-facebook"></i></a></li>
-                                            <li className="list-inline-item"><a className="text-color" href="https://twitter.com/themefisher"><i className="ti-twitter-alt"></i></a></li>
-                                            <li className="list-inline-item"><a className="text-color" href="https://github.com/themefisher"><i className="ti-google"></i></a></li>
-                                            <li className="list-inline-item"><a className="text-color" href="https://instagram.com/themefisher/"><i className="ti-linkedin"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {
+                            teams.map((person, index) => {
 
-                        <div className="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                            <div className="card border-0 rounded-0 hover-shadow">
-                                <img className="card-img-top rounded-0" src="images/teachers/teacher-2.jpg" alt="teacher" />
-                                <div className="card-body">
-                                    <a href="teacher-single.html">
-                                        <h4 className="card-title">Clark Malik</h4>
-                                    </a>
-                                    <div className="d-flex justify-content-between">
-                                        <span>Teacher</span>
-                                        <ul className="list-inline">
-                                            <li className="list-inline-item"><a className="text-color" href="https://facebook.com/themefisher"><i className="ti-facebook"></i></a></li>
-                                            <li className="list-inline-item"><a className="text-color" href="https://twitter.com/themefisher"><i className="ti-twitter-alt"></i></a></li>
-                                            <li className="list-inline-item"><a className="text-color" href="https://github.com/themefisher"><i className="ti-google"></i></a></li>
-                                            <li className="list-inline-item"><a className="text-color" href="https://instagram.com/themefisher/"><i className="ti-linkedin"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                const {social} = person
 
-                        <div className="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                            <div className="card border-0 rounded-0 hover-shadow">
-                                <img className="card-img-top rounded-0" src="images/teachers/teacher-3.jpg" alt="teacher" />
-                                <div className="card-body">
-                                    <a href="teacher-single.html">
-                                        <h4 className="card-title">John Doe</h4>
-                                    </a>
-                                    <div className="d-flex justify-content-between">
-                                        <span>Teacher</span>
-                                        <ul className="list-inline">
-                                            <li className="list-inline-item"><a className="text-color" href="https://facebook.com/themefisher"><i className="ti-facebook"></i></a></li>
-                                            <li className="list-inline-item"><a className="text-color" href="https://twitter.com/themefisher"><i className="ti-twitter-alt"></i></a></li>
-                                            <li className="list-inline-item"><a className="text-color" href="https://github.com/themefisher"><i className="ti-google"></i></a></li>
-                                            <li className="list-inline-item"><a className="text-color" href="https://instagram.com/themefisher/"><i className="ti-linkedin"></i></a></li>
-                                        </ul>
+                                return (
+                                    <div key={index} className="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+                                        <div className="card border-0 rounded-0 hover-shadow">
+                                            <img className="card-img-top rounded-0" src={person.imageUrl} alt="teacher" />
+                                            <div className="card-body">
+                                                <Link >
+                                                    <h4 className="card-title">{person.name}</h4>
+                                                </Link>
+                                                <div className="d-flex justify-content-between">
+                                                    <span>{person.position}</span>
+                                                    {/* <ul className="list-inline">
+                                                        <li className="list-inline-item"><a className="text-color" target='_blank' href={social.facebook}><i className="ti-facebook"></i></a></li>
+                                                        <li className="list-inline-item"><a className="text-color" target='_blank' href={social.twitter}><i className="ti-twitter-alt"></i></a></li>
+                                                        <li className="list-inline-item"><a className="text-color" target='_blank' href={social.google}><i className="ti-google"></i></a></li>
+                                                        <li className="list-inline-item"><a className="text-color" target='_blank' href={social.linkedin}><i className="ti-linkedin"></i></a></li>
+                                                    </ul> */}
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                )
+                            })
+                        }
+
+
+
                     </div>
                 </div>
             </section>

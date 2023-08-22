@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import whiteLogo from '../../assets/logo-white.png'
 
 const TopHeader = () => {
 
@@ -8,12 +9,11 @@ const TopHeader = () => {
             <div className="container">
                 <div className="row no-gutters">
                     <div className="col-lg-4 text-center text-lg-left">
-                        <a className="text-color mr-3" href="tel:+443003030266"><strong>CALL</strong> +44 300 303 0266</a>
+                        <a className="text-color mr-3" href="tel:+919818325623"><strong>CALL</strong> +91 981 832 5623</a>
                         <ul className="list-inline d-inline">
-                            <li className="list-inline-item mx-0"><a className="d-inline-block p-2 text-color" href="https://facebook.com/themefisher/"><i className="ti-facebook"></i></a></li>
-                            <li className="list-inline-item mx-0"><a className="d-inline-block p-2 text-color" href="https://twitter.com/themefisher"><i className="ti-twitter-alt"></i></a></li>
-                            <li className="list-inline-item mx-0"><a className="d-inline-block p-2 text-color" href="https://github.com/themefisher"><i className="ti-github"></i></a></li>
-                            <li className="list-inline-item mx-0"><a className="d-inline-block p-2 text-color" href="https://instagram.com/themefisher/"><i className="ti-instagram"></i></a></li>
+                            <li className="list-inline-item mx-0"><a target="_blank" className="d-inline-block p-2 text-color" href="https://www.facebook.com/profile.php?id=100077465478257"><i className="ti-facebook"></i></a></li>
+                            <li className="list-inline-item mx-0"><a target="_blank" className="d-inline-block p-2 text-color" href="https://in.linkedin.com/company/vp23ark"><i className="ti-linkedin"></i></a></li>
+                            <li className="list-inline-item mx-0"><a target="_blank" className="d-inline-block p-2 text-color" href="https://instagram.com/vp23ark/"><i className="ti-instagram"></i></a></li>
                         </ul>
                     </div>
                     <div className="col-lg-8 text-center text-lg-right">
@@ -43,7 +43,7 @@ const BaseHeader = ({active}) => {
         <div className="navigation w-100">
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-dark p-0">
-                    <a className="navbar-brand" href="/"><img src="images/logo.png" alt="logo" /></a>
+                    <Link className="navbar-brand" to="/"><img src={whiteLogo} alt="logo" /></Link>
                     <button className="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -79,12 +79,10 @@ const BaseHeader = ({active}) => {
 
 
 const Header = () => {
-    const navigate = useNavigate();
     const location = useLocation();
     const [active, setActive] = useState('/')
     useEffect(() => {
         setActive(location.pathname)
-        console.log("this is location",location)
     }, [location]);
 
     return (

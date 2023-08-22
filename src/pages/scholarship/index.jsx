@@ -1,17 +1,24 @@
 import { Header, Footer, PageTitleSection } from '../../components';
+import scholarshipBack from '../../assets/scholarship/scholarship.jpg';
+import scholarshipItem1 from '../../assets/scholarship/scholarship-item-1.jpg'
+import scholarshipItem2 from '../../assets/scholarship/scholarship-item-2.jpg'
+import scholarshipItem3 from '../../assets/scholarship/scholarship-item-3.jpg'
 
 const Scholarship = () => {
     return (
         <div>
             <Header />
 
-            <PageTitleSection />
+            <PageTitleSection 
+                PageTitle={"Nurture Your Potential with VP Ark"} 
+                PageDesc={"Kickstart your tech career with VP Ark's intership program. Gain hands-on experience and guidance from experts who believe in nurturing emerging talent."} 
+            />
 
             <section className="section">
                 <div className="container">
                     <div className="row mb-5">
                         <div className="col-md-6 mb-4 mb-md-0">
-                            <img className="img-fluid" src="images/scholarship/scholarship.jpg" alt="scholarship news" />
+                            <img className="img-fluid" src={scholarshipBack} alt="scholarship news" />
                         </div>
                         <div className="col-md-6">
                             <h2>SCHOLARSHIPS NEWS</h2>
@@ -28,7 +35,7 @@ const Scholarship = () => {
 
                         <div className="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                             <div className="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
-                                <img className="card-img-top rounded-0" src="images/scholarship/scholarship-item-1.jpg" alt="scholarship-thumb" />
+                                <img className="card-img-top rounded-0" src={scholarshipItem1} alt="scholarship-thumb" />
                                 <div className="card-body">
                                     <p className="mb-1">Engineering</p>
                                     <h4 className="card-title mb-3">CHEMICAL ENGINEERING</h4>
@@ -46,7 +53,7 @@ const Scholarship = () => {
 
                         <div className="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                             <div className="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
-                                <img className="card-img-top rounded-0" src="images/scholarship/scholarship-item-2.jpg" alt="scholarship-thumb" />
+                                <img className="card-img-top rounded-0" src={scholarshipItem2} alt="scholarship-thumb" />
                                 <div className="card-body">
                                     <p className="mb-1">Design & Arts</p>
                                     <h4 className="card-title mb-3">MUSIC & ARTS</h4>
@@ -64,7 +71,7 @@ const Scholarship = () => {
 
                         <div className="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                             <div className="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
-                                <img className="card-img-top rounded-0" src="images/scholarship/scholarship-item-3.jpg" alt="scholarship-thumb" />
+                                <img className="card-img-top rounded-0" src={scholarshipItem3} alt="scholarship-thumb" />
                                 <div className="card-body">
                                     <p className="mb-1">Design & Arts</p>
                                     <h4 className="card-title mb-3">GRAPHICS DESIGN</h4>
